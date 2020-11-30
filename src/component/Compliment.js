@@ -7,8 +7,8 @@ const Compliment = (props) => {
     const getCompliment = async () => {
       try{
         const data = await Axios.get('https://complimentr.com/api')
-        setCompliment(data)
-        console.log(data)
+        setCompliment(data.data.compliment)
+        console.log(data.data.compliment)
       }catch (error){
         throw error
       }
@@ -21,6 +21,9 @@ const Compliment = (props) => {
    return (
        <div className="wrapper">
           <button onClick={() => getCompliment()}> Compliment me! </button>
+          <h3>
+            {compliment}
+       </h3>
        </div>
    )
 }
