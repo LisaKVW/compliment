@@ -20,10 +20,13 @@ const Compliment = (props) => {
 
    return (
        <div className="wrapper">
+         <h2> Welcome to Jody's! <br/>
+           Here to help you with a compliment on a bad day 
+         </h2>
           <button onClick={() => getCompliment()}> Compliment me! </button>
-          <h3>
+          <h2>
             {compliment}
-       </h3>
+       </h2>
        </div>
    )
 }
